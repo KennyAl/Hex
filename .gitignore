@@ -7,6 +7,16 @@
 *.userosscache
 *.sln.docstates
 
+
+#UE4 Files
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+#disalbed for now
+Content/
+*.sln
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
