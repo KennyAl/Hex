@@ -6,6 +6,13 @@ public class Hex : ModuleRules
 {
 	public Hex(TargetInfo Target)
 	{
+
+        // Folders to work with
+        PrivateIncludePaths.AddRange(new string[] { 
+				"Hex",
+				"Hex/Map and Generation",
+			});
+
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
