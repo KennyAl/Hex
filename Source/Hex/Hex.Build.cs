@@ -11,6 +11,7 @@ public class Hex : ModuleRules
         PrivateIncludePaths.AddRange(new string[] { 
 				"Hex",
 				"Hex/Map and Generation",
+                "Hex/Map and Generation/Editor"
 			});
 
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
