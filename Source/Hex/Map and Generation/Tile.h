@@ -14,14 +14,14 @@ enum class EBiomes : uint8
 
 
 /**
-* Storing all informations about a single tile
+* Stores all informations about a single tile
 */
 USTRUCT(BlueprintType)
 struct FsTile
 {
 	GENERATED_USTRUCT_BODY()
 	
-	/** The biome that this tile has */
+	/** The biome this tile has */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Map Utilities | Map Data")
 	EBiomes Biome;
 
@@ -47,7 +47,7 @@ struct FsTile
 
 	/**
 	* Position of the tile in worldspace
-	* MAYBE THIS WILL BE REPLAYED BY A METHOD TO CALCULATE THE TILES POSITION IF NECCESSARRY
+	* MAYBE THIS WILL BE REPLACED BY A METHOD TO CALCULATE THE TILES POSITION IF NECCESSARRY
 	*/
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Map Utilities | Map Data")
 	FVector WorldPosition;

@@ -140,7 +140,7 @@ public:
 };
 
 
-/** A Vector 3 with integer precision, full support for assignment and comparisons */
+/** A Vector 2 with integer precision, full support for assignment and comparisons */
 class IVector2
 {
 public:
