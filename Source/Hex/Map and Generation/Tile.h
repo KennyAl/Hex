@@ -20,10 +20,22 @@ USTRUCT(BlueprintType)
 struct FsTile
 {
 	GENERATED_USTRUCT_BODY()
-
+	
 	/** The biome that this tile has */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Map Utilities | Map Data")
 	EBiomes Biome;
+
+	/**
+	* The altitude this tile has
+	* 7 (max height)
+	* .
+	* .
+	* 0 (sea level)
+	* .
+	* .
+	* -4 (deep ocean)
+	*/
+	int32 Altitude;
 
 	/** 
 	* Position of the tile within the grid 
