@@ -4,3 +4,9 @@
 
 #include "Engine.h"
 
+//
+// Custom log categories
+// 
+
+/** Map Editor */
+DECLARE_LOG_CATEGORY_EXTERN(Editor, Log, All);
