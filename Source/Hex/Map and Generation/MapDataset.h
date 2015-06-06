@@ -19,11 +19,11 @@ public:
 	UMapDataset();
 
 	/** This constructor resizes the dataset at initialization
-	* @param Size	The size that the dataset should have
+	* @param NewSize	The size that the dataset should have
 	*/
-	UMapDataset(IVector2 Size);
+	UMapDataset(IVector2 NewSize);
 
-	/** Rezises the dataset, and fills it with default tiles
+	/** Resizes the dataset, and fills it with default tiles
 	* @param NewSize	The new size the dataset should have
 	*/
 	void Resize(IVector2 NewSize);
@@ -42,9 +42,16 @@ public:
 	UFUNCTION(BlueprintPure, Category = "Map Utilities | Map Data")
 	FsTile GetTile(int32 X, int32 Y);
 
+	/** Returns the size of the map */
+	FORCEINLINE const IVector2* GetSize(){ return &Size; }
+	
+
 
 private:
 
 	/** The tile data */
 	TArray<TArray<FsTile*>> Tiles;
+
+	/** The size of the map */
+	IVector2 Size;
 };

@@ -7,16 +7,25 @@ UMapDataset::UMapDataset()
 {
 }
 
-UMapDataset::UMapDataset(IVector2 Size)
+UMapDataset::UMapDataset(IVector2 NewSize)
 {
-	Resize(Size);
+	Resize(NewSize);
 }
+
 void UMapDataset::Resize(IVector2 NewSize)
 {
 	Tiles.Empty();
 	TArray<FsTile*> InitHelper;
-	InitHelper.Init(new FsTile, NewSize.Y);
+	InitHelper.Init(nullptr, NewSize.Y);
 	Tiles.Init(InitHelper, NewSize.X);
+	for (int32 X = 0; X < NewSize.X; X++)
+	{
+		for (int32 Y = 0; Y < NewSize.Y; Y++)
+		{
+			Tiles[X][Y] = new FsTile;
+		}
+	}
+	Size = NewSize;
 }
 
 FsTile UMapDataset::GetTile(int32 X, int32 Y)
