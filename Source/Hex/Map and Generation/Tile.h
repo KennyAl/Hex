@@ -23,7 +23,7 @@ struct FsTile
 	
 	/** The biome this tile has */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Map Utilities | Map Data")
-	EBiomes Biome;
+	EBiomes Biome = EBiomes::EDefault;
 
 	/**
 	* The altitude this tile has
@@ -35,7 +35,7 @@ struct FsTile
 	* .
 	* -4 (deep ocean)
 	*/
-	int32 Altitude;
+	int32 Altitude = 0;
 
 	/** 
 	* Position of the tile within the grid 
@@ -43,14 +43,14 @@ struct FsTile
 	* find out it's position
 	*/
 	// TODO: Maybe add support for blueprints in the future, if necessary
-	IVector3 Coords;
+	IVector3 Coords(0);
 
 	/**
 	* Position of the tile in worldspace
 	* MAYBE THIS WILL BE REPLACED BY A METHOD TO CALCULATE THE TILES POSITION IF NECCESSARRY
 	*/
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Map Utilities | Map Data")
-	FVector WorldPosition;
+	FVector WorldPosition(0);
 	
 	/** True if this tile is land, use for quick checks (faster than performing checks with the biome) */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Map Utilities | Map Data")
