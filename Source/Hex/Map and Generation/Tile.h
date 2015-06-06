@@ -54,6 +54,6 @@ struct FsTile
 	
 	/** True if this tile is land, use for quick checks (faster than performing checks with the biome) */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Map Utilities | Map Data")
-	bool IsLand;
+	bool IsLand = false;
 
 };
